@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All users</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Password</th>
+                <th>Created At</th>
+            </tr>
+            <tbody>
+            <tr th:each="user: ${users}">
+                <td>
+                    <span th:text="${user.id}" class="text-primary"></span>
+                </td>
+                <td>
+                    <span th:text="${user.name}" class="text-primary"></span>
+                </td>
+                <td>
+                    <span th:text="${user.role}" class="text-primary"></span>
+                </td>
+                <td>
+                    <span th:text="${user.password}" class="text-primary"></span>
+                </td>
+                <td>
+                    <span th:text="${user.createdAt}" class="text-primary"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
